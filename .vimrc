@@ -11,6 +11,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'benekastah/neomake'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'wavded/vim-stylus'
+Plugin 'slim-template/vim-slim'
+Plugin 'vasconcelloslf/vim-interestingwords'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,8 +44,6 @@ set helplang=ru
 set laststatus=2
 set modelines=0
 
-
-set runtimepath=~/.vim,~/.vim/bundle/Vundle.vim,~/.vim/bundle/vim-fugitive,~/.vim/bundle/L9,~/.vim/bundle/command-t,~/.vim/bundle/plugin,~/.vim/bundle/sparkup/vim/,~/.vim/bundle/vim-airline,~/.vim/bundle/vim-stylus,~/.vim/bundle/vim-slim,~/.vim/bundle/vim-interestingwords,~/.vim/bundle/vim-eslint-compiler,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,~/.vim/after,~/.vim/bundle/Vundle.vim,~/.vim/bundle/Vundle.vim/after,~/.vim/bundle/vim-fugitive/after,~/.vim/bundle/L9/after,~/.vim/bundle/command-t/after,~/.vim/bundle/plugin/after,~/.vim/bundle/sparkup/vim//after,~/.vim/bundle/vim-airline/after,~/.vim/bundle/vim-stylus/after,~/.vim/bundle/vim-slim/after,~/.vim/bundle/vim-interestingwords/after,~/.vim/bundle/vim-eslint-compiler/after
 set shiftwidth=2
 set tabstop=2
 set window=0
@@ -48,5 +52,20 @@ set window=0
 syntax enable
 set number
 set cursorline
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_javascript_checkers = ['eslint']
+
+autocmd! BufReadPost * Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_javascipt_enabled_makers = ['eslint']
 
 :autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
