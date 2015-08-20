@@ -69,3 +69,5 @@ autocmd! BufWritePost * Neomake
 let g:neomake_javascipt_enabled_makers = ['eslint']
 
 :autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+let g:airline_powerline_fonts = 1
