@@ -17,6 +17,9 @@ Plugin 'wavded/vim-stylus'
 Plugin 'slim-template/vim-slim'
 Plugin 'vasconcelloslf/vim-interestingwords'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'kien/ctrlp.vim'
 
 Plugin 'mileszs/ack.vim'
 
@@ -73,3 +76,5 @@ let g:neomake_javascipt_enabled_makers = ['eslint']
 :autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 let g:airline_powerline_fonts = 1
+
+map <C-n> :NERDTreeToggle<CR>
