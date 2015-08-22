@@ -20,6 +20,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ap/vim-css-color'
 
 Plugin 'mileszs/ack.vim'
 
@@ -78,3 +82,5 @@ let g:neomake_javascipt_enabled_makers = ['eslint']
 let g:airline_powerline_fonts = 1
 
 map <C-n> :NERDTreeToggle<CR>
+
+let g:ctrlp_working_path_mode = 'ra'
