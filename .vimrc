@@ -24,6 +24,13 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ap/vim-css-color'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'marijnh/tern_for_vim'
+
+Plugin 'fholgado/minibufexpl.vim'
+
+" no powerline in neovim :(
+" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'mileszs/ack.vim'
 
@@ -84,3 +91,9 @@ let g:airline_powerline_fonts = 1
 map <C-n> :NERDTreeToggle<CR>
 
 let g:ctrlp_working_path_mode = 'ra'
+
+" If you want to auto-completion to work stable in older vim, disable this option
+let g:airline#extensions#tabline#enabled = 1
+
+" Airline tabs settings
+let g:airline#extensions#tabline#fnamemod = ':t'
